@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>music app</title>
+	<link rel="stylesheet" type="text/css" href="static/style.css">
+</head>
+<body>
+<div class="container">
+	<div class="navbar">
+		<img id="header-icon" src="static/head1.jpg">
+		<label id="logo">=</label>
+		<ul>
+			<li><a class="active" href="#">HOME</a></li>
+			<li><a href="#">ABOUT</a></li>
+			<li><a href="#">PLAYLIST</a></li>
+			<li><a href="#">SONGS</a></li>
+			<li><a href="#">CONDACT</a></li>
+			
+		</ul>
+	</div>	
+	<div class="content">
+		<div class="left-col">
+		<h2>THE <br>COOLEST <br>VOICE</h2>	
+		</div>
+		<div class="right-col">
+			
+			<p style="color: darkorange">click here to listen</p>
+			<img src="static/play.png" id="icon">
+		</div>	
+	</div>
+</div>
+
+<audio id="mySong">
+	<source src="static/pixabay-1-min-piano_arp-4222.mp3" type="audio/mp3">
+</audio>
+
+<script type="text/javascript">
+	let menu=document.getElementById('logo');
+	let show=document.querySelector('ul');
+	let song=document.getElementById('mySong');
+	let icon=document.getElementById('icon');
+	let content=document.querySelector('.content');
+	
+
+	icon.addEventListener('click',playSong);
+	menu.addEventListener('click',showMenu);
+
+	function playSong() {
+		if(song.paused){
+			song.play();
+			song.loop=true;
+			icon.src="static/play.png";
+		}else{
+			song.pause();
+			icon.src="static/pause.jpeg";
+		}
+	}
+
+	function showMenu() {
+		show.classList.toggle('show');
+		content.classList.toggle('hidde');
+	}
+ 
+</script>
+</body>
+</html>

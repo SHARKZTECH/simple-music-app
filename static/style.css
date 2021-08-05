@@ -1,0 +1,160 @@
+*{
+
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+
+}
+.container{
+	height: 140vh;
+	width: 100%;
+	background:url("images.jpeg");
+/*	background-size: cover;
+*/	position: relative;	
+    animation: animatedBackground 30s linear infinite alternate;
+}
+.navbar{
+	width: 88%;
+	margin: auto;
+	padding: 15px 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+/*	background-color: darkgray;
+*/	word-spacing: 2rem;
+}
+.navbar img{
+	height: 75px;
+	width: 100px;
+    animation: ratation 5s linear infinite;
+}
+
+.navbar ul li{
+	list-style: none;
+	display: inline-block;
+		
+}
+.navbar ul li a{
+	text-decoration: none;
+	color: blue;
+	font-size: 1.2rem;
+	transition: all 0.4s ease;
+}
+.navbar ul li a.active, a:hover{
+	color: white;
+	border:2px white solid;
+	padding: 0.6rem;
+}
+.content{
+	height: 100vh;
+	width: 100%;
+	position: absolute;
+	top: 30%;
+}
+
+.left-col {
+	margin-left: 6%;
+	color: transparent;
+	font-size: 1.5rem;
+	float: left;
+	line-height: 70px;
+	background-image: url(1.jpg);
+	background-position: ;
+	-webkit-background-clip: text;
+    animation: animatedBackground 3s linear infinite alternate;
+
+}
+.right-col{
+	float: right;
+	margin-right: 6%;
+	margin-top: 120px;
+	display: flex;
+	align-items: center;
+}
+.right-col p{
+	font-size: 1.2rem;
+	color:darkorange;
+	font-weight: 400;
+    margin-right: 4px;
+
+}
+#icon{
+	width: 30px;
+	height: 50px;
+	border-radius: 50%;
+
+}
+#logo{
+	color: white;
+	font-weight: bolder;
+	font-size: 1.6rem;
+	float: right;
+	margin-right: 40px;
+	display: none;
+}
+@keyframes animatedBackground{
+	form{
+		background-position: 0 0;
+	}
+	to{
+		background-position: 100% 0%;
+	}
+}
+@keyframes ratation{
+	from{
+		transform: rotateY(0deg);
+	}
+	to{
+		transform: rotateY(359deg);
+	}
+}
+
+@media (max-width: 900px){
+	.content.hidde{
+		display: none;
+
+	}
+	.right-col{
+		width: 25%;
+		
+	}
+
+	#header-icon{
+		opacity: 0.5;
+		margin-left: 80px;
+	}
+	#logo{
+		display: block;
+	}
+	.navbar{
+		position: fixed;
+		display: block;
+		text-align: center;
+		background-color:;
+		width: 100%;
+		line-height: 70px;
+
+	}
+	.navbar ul{
+		display: none;
+	}
+	.navbar ul li{
+		display: block;
+
+	}
+	.navbar ul li a{
+		font-size: 1.4rem;
+		font-weight: bolder;
+		color: darkorange;
+}
+	.navbar ul li a.active, a:hover{
+		border-radius: 2rem;
+
+	}
+}
+	.navbar ul.show{
+		display: block;
+	}
+
+}
+
